@@ -1,0 +1,24 @@
+10:31:24 **** Incremental Build of configuration Debug for project UART_Example ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/it.d" -MT"Core/Src/it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/it.o"
+arm-none-eabi-gcc -o "UART_Example.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\MCU2_HAL\My work\UART_Example\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Example.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Example.elf
+ 
+arm-none-eabi-objdump -h -S  UART_Example.elf  > "UART_Example.list"
+arm-none-eabi-objcopy  -O binary  UART_Example.elf  "UART_Example.bin"
+arm-none-eabi-size   UART_Example.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5116	     24	   1640	   6780	   1a7c	UART_Example.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Example.bin
+ 
+Finished building: UART_Example.list
+ 
+10:32:40 **** Incremental Build of configuration Debug for project UART_Example ****
+make -j12 all 
+arm-none-eabi-size   UART_Example.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5116	     24	   1640	   6780	   1a7c	UART_Example.elf
+Finished building: default.size.stdout
+ 
