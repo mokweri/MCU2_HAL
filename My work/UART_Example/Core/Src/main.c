@@ -1,10 +1,10 @@
 #include <string.h>
-#include "stm32f4xx_hal.h"
 #include "main.h"
 
 void SystemClockConfig(void);
 void UART2_Init(void);
 void Error_handler(void);
+uint8_t convert_to_upper(uint8_t data);
 
 UART_HandleTypeDef huart2;
 
@@ -21,6 +21,26 @@ int main(void)
 	{
 		Error_handler();
 	}
+
+	uint8_t rcvd_data;
+	uint8_t data_buffer[100];
+	uint32_t count =0;
+
+	while(1)
+	{
+		HAL_UART_Receive(&huart2, &rcvd_data, 1, HAL_MAX_DELAY);
+		if(rcvd_data == '\r')
+		{
+			break;
+		}else{
+			data_buffer[count++] = convert_to_upper(rcvd_data);
+		}
+
+	}
+	data_buffer[count++]='\r';
+
+	//send back
+	HAL_UART_Transmit(&huart2, data_buffer, count, HAL_MAX_DELAY);
 
 	while(1);
 
@@ -55,4 +75,14 @@ void SystemClockConfig()
 {
 	//special system clock configuration
 	//use default
+}
+
+uint8_t convert_to_upper(uint8_t data)
+{
+	if(data > 'a' && data < 'z')
+	{
+		data = data - ('a' - 'z');
+	}
+
+	return data;
 }

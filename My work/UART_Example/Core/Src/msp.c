@@ -4,7 +4,7 @@
  *  Created on: 29 Jul 2021
  *      Author: OBED
  */
-#include "stm32f4xx_hal.h"
+#include "main.h"
 
 void HAL_MspInit(void)
 {

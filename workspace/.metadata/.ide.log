@@ -40,3 +40,24 @@
 2021-07-30 08:50:56,935 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
 2021-07-30 08:50:56,937 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
 2021-07-30 08:50:56,939 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-10 09:29:24,106 [INFO] Activator:170 - 
+
+
+2021-08-10 09:29:24,137 [INFO] Activator:171 - !SESSION log4j initialized
+2021-08-10 09:29:25,367 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-10 09:29:25,368 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-10 09:29:25,390 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-11 11:21:13,654 [INFO] Activator:170 - 
+
+
+2021-08-11 11:21:13,656 [INFO] Activator:171 - !SESSION log4j initialized
+2021-08-11 11:21:14,485 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-11 11:21:14,487 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-11 11:21:14,522 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-16 09:19:05,902 [INFO] Activator:170 - 
+
+
+2021-08-16 09:19:05,926 [INFO] Activator:171 - !SESSION log4j initialized
+2021-08-16 09:19:08,034 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-16 09:19:08,036 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-08-16 09:19:08,058 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
