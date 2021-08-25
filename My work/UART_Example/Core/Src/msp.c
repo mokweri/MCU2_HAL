@@ -27,24 +27,25 @@ void HAL_MspInit(void)
 
 void HAL_UART_MspInit(UART_HandleTypeDef *huart)
 {
-	GPIO_InitTypeDef gpio_uart2;
-	//Low level initialization of the USART2 peripheral
-	//1. Enable the clock for the USART and GPIOA peripheral
-	__HAL_RCC_USART2_CLK_ENABLE();
-	__HAL_RCC_GPIOA_CLK_ENABLE();
+	 GPIO_InitTypeDef gpio_uart;
+	 //here we are going to do the low level inits. of the USART2 peripheral
 
-	//2. Do the pin muxing configurations
-	gpio_uart2.Pin = GPIO_PIN_2;
-	gpio_uart2.Mode = GPIO_MODE_AF_PP;
-	gpio_uart2.Pull = GPIO_PULLUP;
-	gpio_uart2.Speed = GPIO_SPEED_FREQ_LOW;
-	gpio_uart2.Alternate = GPIO_AF7_USART2;
-	HAL_GPIO_Init(GPIOA, &gpio_uart2);	//TX
+	 //1. enable the clock for the USART2 peripheral as well as for GPIOA peripheral
+	 __HAL_RCC_USART2_CLK_ENABLE();
+	 __HAL_RCC_GPIOA_CLK_ENABLE();
 
-	gpio_uart2.Pin = GPIO_PIN_3;
-	HAL_GPIO_Init(GPIOA, &gpio_uart2);	//RX
+	 //2 . Do the pin muxing configurations
+	 gpio_uart.Pin = GPIO_PIN_2;
+	 gpio_uart.Mode =GPIO_MODE_AF_PP;
+	 gpio_uart.Pull = GPIO_PULLUP;
+	 gpio_uart.Speed = GPIO_SPEED_FREQ_LOW;
+	 gpio_uart.Alternate =  GPIO_AF7_USART2; //UART2_TX
+	 HAL_GPIO_Init(GPIOA,&gpio_uart);
 
-	//3. Enable the IRQ and set the priority (NVIC settings)
-	HAL_NVIC_EnableIRQ(USART2_IRQn);
-	HAL_NVIC_SetPriority(USART2_IRQn, 5, 0);
+	 gpio_uart.Pin = GPIO_PIN_3; //UART2_RX
+	 gpio_uart.Pull = GPIO_NOPULL;
+	 HAL_GPIO_Init(GPIOA,&gpio_uart);
+	 //3 . Enable the IRQ and set up the priority (NVIC settings )
+	 HAL_NVIC_EnableIRQ(USART2_IRQn);
+	 HAL_NVIC_SetPriority(USART2_IRQn,15,0);
 }
