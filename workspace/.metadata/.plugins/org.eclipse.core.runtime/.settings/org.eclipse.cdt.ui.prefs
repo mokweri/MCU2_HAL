@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
-scalability.detect=false
+properties.multi.displ.mode=1
+properties.multi.write.mode=4
+properties.sd.page.enable=true
 scalability.reconciler=false
-sourceHoverBackgroundColor=255,255,225
 spelling_locale_initialized=true
+spelling_user_dictionary_encoding=Cp1252
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
